@@ -1,35 +1,115 @@
-print("\n====Loja TECHSTORE Senai====")
-valor = float(input("Digite o valor total da compra (R$):"))
-forma_pagamento = input("Forma de pagamento (dinheiro/cartão débito/cartão de crédito/pix): ")
+arrObj = [
+  {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "ano": 2022,
+    "versao": "2.0 Dynamic Force",
+    "cor": "Prata",
+    "km": 15000,
+    "cambio": "Automático",
+    "combustivel": "Flex",
+    "portas": 4,
+    "motor": "2.0",
+    "placa": "ABC-1D23",
+    "renavan": "12345678901",
+    "numero_chassi": "9BR123456CD789012",
+    "fipe": {
+      "codigo": "002114-6",
+      "valor_fipe": 130000,
+      "mes_referencia": "novembro/2025"
+    },
+    "valor_venda": 125000
+  },
+  {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "ano": 2021,
+    "versao": "2.0 EX",
+    "cor": "Preto",
+    "km": 22000,
+    "cambio": "Automático",
+    "combustivel": "Flex",
+    "portas": 4,
+    "motor": "2.0",
+    "placa": "DEF-2E45",
+    "renavan": "23456789012",
+    "numero_chassi": "9HG234567GH890123",
+    "fipe": {
+      "codigo": "003004-1",
+      "valor_fipe": 125000,
+      "mes_referencia": "novembro/2025"
+    },
+    "valor_venda": 119000
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Golf",
+    "ano": 2019,
+    "versao": "1.4 TSI Highline",
+    "cor": "Branco",
+    "km": 42000,
+    "cambio": "Automático",
+    "combustivel": "Flex",
+    "portas": 4,
+    "motor": "1.4",
+    "placa": "GHI-3F67",
+    "renavan": "34567890123",
+    "numero_chassi": "9BW345678JK901234",
+    "fipe": {
+      "codigo": "005456-7",
+      "valor_fipe": 110000,
+      "mes_referencia": "novembro/2025"
+    },
+    "valor_venda": 104000
+  },
+  {
+    "marca": "Ford",
+    "modelo": "Mustang",
+    "ano": 2020,
+    "versao": "5.0 V8 GT",
+    "cor": "Vermelho",
+    "km": 18000,
+    "cambio": "Automático",
+    "combustivel": "Gasolina",
+    "portas": 2,
+    "motor": "5.0",
+    "placa": "JKL-4G89",
+    "renavan": "45678901234",
+    "numero_chassi": "1FA456789LM012345",
+    "fipe": {
+      "codigo": "008001-2",
+      "valor_fipe": 410000,
+      "mes_referencia": "novembro/2025"
+    },
+    "valor_venda": 395000
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Onix",
+    "ano": 2023,
+    "versao": "1.0 Turbo Premier",
+    "cor": "Azul",
+    "km": 8000,
+    "cambio": "Automático",
+    "combustivel": "Flex",
+    "portas": 4,
+    "motor": "1.0 Turbo",
+    "placa": "MNO-5H10",
+    "renavan": "56789012345",
+    "numero_chassi": "9BG567890MN123456",
+    "fipe": {
+      "codigo": "004432-0",
+      "valor_fipe": 99000,
+      "mes_referencia": "novembro/2025"
+    },
+    "valor_venda": 96000
+  }
+]
 
-if forma_pagamento == "dinheiro":
-    total = valor * 0.90
-    print("Pagamento à vista em dinheiro. Desconto de 10% aplicado.")
-elif forma_pagamento == "pix":
-    if valor >= 1000:
-        total = valor * 0.85
-        print("Pagamento via PIX. Desconto de 15% aplicado.")
-    elif valor >= 500 and valor < 1000:
-        total = valor * 0.90
-        print("Pagamento via PIX. Desconto de 10% aplicado.")
-    else:
-        total = valor * 0.95
-        print("Pagamento via PIX. Desconto de 5% aplicado.")
-elif forma_pagamento == "débito":        
-            total = valor
-            print("Pagamento à no cartão de débito!")
-elif forma_pagamento == "crédito":
-            parcelas = int(input("Em quantas vezes deseja parcelar? "))
-            if parcelas <=3: 
-                total = valor 
-                print("Parcelamento em até 3x sem juros.")
-            elif 4 <= parcelas <= 6:
-                total = valor*1.10
-                print("Parcelamento *4 a 6x com 10 % de juros.")
-            else: 
-                total= valor*1.20
-                print("Parcelamento acima de 6x com 20% de juros.")
-else:
-    print("Forma de pagamento inv,lida! Tente novamente usando outra opção.")
+marca = "Honda"
 
-print(f"Valor final a pagar: R$ {total:.2f}")
+arrObj = arrObj[marca]
+
+novoArray = arrObj
+
+print(novoArray)
